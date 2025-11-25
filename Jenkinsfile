@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    DOCKERHUB_REPO = 'imt2023006-calculator'
+    DOCKERHUB_REPO = 'calculator-imt2023006'
     IMAGE_TAG = "${env.BUILD_NUMBER}"
   }
 
