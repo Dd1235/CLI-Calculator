@@ -2,9 +2,14 @@ pipeline {
   agent any
 
   environment {
-    DOCKERHUB_REPO = 'calculator-imt2023006'
+    // Explicitly include all relevant paths Jenkins might miss
+    PATH = "/usr/local/go/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+    DOCKERHUB_USER = "deepya123"
+    DOCKERHUB_REPO = "calculator-imt2023006"
     IMAGE_TAG = "${env.BUILD_NUMBER}"
-  }
+    }
+
 
   options {
     skipDefaultCheckout(true)
